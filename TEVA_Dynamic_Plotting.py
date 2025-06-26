@@ -166,7 +166,6 @@ def cc_plotter(min_sens, max_sens, fitness, x_fit, y_fit, z_fit, contour_colors,
     all_cc_plots = []
     for i in range(0, len(cc_len)):
         # Filter by order
-        # order_filtered_CCs = GroupFilter(column_name='Order', group=len(cc_len) - i)
         filter_cc_order_idx = cc_plot_data.index[cc_plot_data['Order'] == len(cc_len) - i].tolist()
         order_filtered_CCs = IndexFilter(filter_cc_order_idx)
         # Plot
@@ -196,7 +195,6 @@ def cc_plotter(min_sens, max_sens, fitness, x_fit, y_fit, z_fit, contour_colors,
     all_dnf_plots = []
     for i in range(0, len(dnf_len)):
         # filter by order
-        # order_filtered_DNFs = GroupFilter(column_name='Order', group=len(dnf_len) - i)
         filter_dnf_order_idx = dnf_plot_data.index[dnf_plot_data['Order'] == len(dnf_len) - i].tolist()
         order_filtered_DNFs = IndexFilter(filter_dnf_order_idx)
         # plot
