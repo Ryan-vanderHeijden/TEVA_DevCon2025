@@ -207,7 +207,12 @@ def cc_plotter(min_sens, max_sens, fitness, x_fit, y_fit, z_fit, contour_colors,
                              hover_color='black',
                              legend_label='DNF Order {}'.format(len(dnf_len) - i),
                              fill_alpha=1)
+        
+        dnf_plot.visible = False
+        
         all_dnf_plots.append(dnf_plot)
+    
+
 
     # Add hover tool for CCs
     p.add_tools(HoverTool(renderers = all_cc_plots,
